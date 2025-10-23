@@ -1,0 +1,4 @@
+.weatherInformationSection {
+    background: url('../assets/images/bg-today-small.svg') no-repeat center center;
+    background-size: cover;
+}

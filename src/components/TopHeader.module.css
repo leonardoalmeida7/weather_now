@@ -1,0 +1,6 @@
+.menu {
+    background-color: var(--color-neutral-800);
+    cursor: pointer;
+    position: relative;
+}
+

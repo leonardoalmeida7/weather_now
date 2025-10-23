@@ -1,0 +1,7 @@
+.units {
+    cursor: pointer;
+}
+
+.units:hover {
+    background-color: var(--color-neutral-600);
+}

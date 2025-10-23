@@ -1,0 +1,40 @@
+:root {
+  /* Colors */
+  --color-neutral-900: #03012d;
+  --color-neutral-800: #1c1f3b;
+  --color-neutral-700: #1f2126;
+  --color-neutral-600: #1f2124;
+  --color-neutral-300: #b0b3c1;
+  --color-neutral-200: #e4e6f0;
+  --color-neutral-0: #ffffff;
+
+  --color-orange-500: #ff8a00;
+
+  --color-blue-500: #4a90e2;
+  --color-blue-700: #2c5cb8;
+
+  /* Font Sizes */
+  --font-size-xs: 12px; 
+  --font-size-sm: 14px; 
+  --font-size-md: 16px; 
+  --font-size-lg: 18px; 
+  --font-size-xl: 20px; 
+  --font-size-2xl: 28px; 
+  --font-size-3xl: 32px; 
+  --font-size-4xl: 52px; 
+  --font-size-5xl: 96px; 
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-neutral-900);
+  color: var(--color-neutral-200);
+}

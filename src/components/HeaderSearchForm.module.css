@@ -1,0 +1,31 @@
+.inputContainer {
+    background-color: var(--color-neutral-600);
+    width: 100%;
+}
+
+
+.input {
+    color: var(--color-neutral-0);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: var(--font-size-xl);
+}
+
+
+.input::placeholder {
+    color: var(--color-neutral-200);
+}
+
+.button {
+    background-color: var(--color-blue-700);
+    color: var(--color-neutral-0);
+    border: none;
+    font-size: var(--font-size-2xl);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: var(--color-blue-500);
+    }
+}
