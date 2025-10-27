@@ -20,9 +20,9 @@ export const CityWeatherProvider = ({ children }) => {
         setError(null);
 
         try {
-            const { lat, lon, name } = cityWeather[0];
+            const { lat, lon, name, country } = cityWeather[0];
             const data = await fetchWeather(lat, lon);
-            setWeatherData({ weatherData: data, name });
+            setWeatherData({ weatherData: data, name, country });
         } catch (err) {
             console.error('Erro ao buscar dados do clima:', err);
             setError('Erro ao buscar dados do clima. Tente novamente.');

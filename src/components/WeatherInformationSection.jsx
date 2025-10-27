@@ -6,7 +6,7 @@ import styles from './WeatherInformationSection.module.css'
 
 const WeatherInformationSection = () => {
   return (
-    <section className={`${styles.weatherInformationSection}`}>
+    <section >
         <CityWeatherContainer />
         <WeatherInfoContainer />
     </section>

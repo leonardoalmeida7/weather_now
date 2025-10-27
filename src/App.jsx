@@ -24,7 +24,7 @@ function App() {
           <DailyForecastSection />
         </>
       )}
-      {!error && (
+      {!weatherData && (
         <div className='text-center my-5'>
           <p className='h2 fw-bold'>No search result found!</p>
         </div>
