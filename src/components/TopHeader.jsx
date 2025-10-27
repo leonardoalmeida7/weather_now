@@ -13,7 +13,7 @@ const TopHeader = () => {
   return (
     <div className='d-flex justify-content-between align-items-center p-3'>
         <div className={styles.logo}>
-            <img src={logo} alt="Weather App Logo" />
+            <img src={logo} alt="Weather App Logo" className={styles.logo} />
         </div>
         <div className={`${styles.menu} p-2 d-flex align-items-center gap-2 rounded`} onClick={() => setShowUnits(!showUnits)}>
             <img src={iconUnits} alt="Units Icon" />

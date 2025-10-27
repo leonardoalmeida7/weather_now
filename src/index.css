@@ -1,17 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
 :root {
   /* Colors */
-  --color-neutral-900: #03012d;
-  --color-neutral-800: #1c1f3b;
-  --color-neutral-700: #1f2126;
-  --color-neutral-600: #1f2124;
-  --color-neutral-300: #b0b3c1;
-  --color-neutral-200: #e4e6f0;
+  --color-neutral-900: #03012dff;
+  --color-neutral-800: #272541ff;
+  --color-neutral-700: #312f4bff;
+  --color-neutral-600: #3d3b5eff;
+  --color-neutral-300: #aeaeb7ff;
+  --color-neutral-200: #d5d4d9ff;
   --color-neutral-0: #ffffff;
 
-  --color-orange-500: #ff8a00;
+  --color-orange-500: #ff7c0aff;
 
-  --color-blue-500: #4a90e2;
-  --color-blue-700: #2c5cb8;
+  --color-blue-500: #4455daff;
+  --color-blue-700: #2d1c9cff;
 
   /* Font Sizes */
   --font-size-xs: 12px; 
@@ -30,11 +32,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'DM Sans', sans-serif;
 }
 
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--color-neutral-900);
   color: var(--color-neutral-200);
 }

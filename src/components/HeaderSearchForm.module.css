@@ -21,7 +21,7 @@
     background-color: var(--color-blue-700);
     color: var(--color-neutral-0);
     border: none;
-    font-size: var(--font-size-2xl);
+    font-size: 1.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
 

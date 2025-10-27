@@ -4,3 +4,13 @@
     position: relative;
 }
 
+.logo {
+    width: 160px;
+}
+
+
+@media (min-width: 500px) {
+    .logo {
+        width: auto;
+    }
+}
