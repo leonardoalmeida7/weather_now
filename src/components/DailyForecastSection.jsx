@@ -1,8 +1,12 @@
+import { useContext } from 'react'
 
+import { CityWeatherContext } from '../contexts/CityWeatherContext'
 import WeatherInformationForTheDay from './WeatherInformationForTheDay'
 
 const DailyForecastSection = () => {
-  
+
+  const { weatherData } = useContext(CityWeatherContext)
+
   const date = new Date()
   const weekday = date.toLocaleDateString('en-US', { weekday: 'short' })
 
@@ -18,13 +22,17 @@ const DailyForecastSection = () => {
     }
   }
   
+  const dailyDataMax = weatherData?.weatherData?.daily?.temperature_2m_max;
+  const dailyDataMin = weatherData?.weatherData?.daily?.temperature_2m_min;
+  const dailyWeatherCode = weatherData?.weatherData?.daily?.weather_code;
+
 
   return (
     <section className='mt-5'>
         <h2>Daily forecast</h2>
-        <div className='d-flex gap-3 flex-wrap'>
+        <div className='d-flex gap-3 flex-wrap mt-4'>
           {orderedDays.map((day, index) => (
-            <WeatherInformationForTheDay key={index} day={day} />
+            <WeatherInformationForTheDay key={index} day={day} maxTemp={dailyDataMax[index].toFixed(0)} minTemp={dailyDataMin[index].toFixed(0)} weatherCode={dailyWeatherCode[index]} />
           ))}
         </div>
       </section>

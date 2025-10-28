@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import PageHeader from './components/PageHeader'
 import WeatherInformationSection from './components/WeatherInformationSection'
 import DailyForecastSection from './components/DailyForecastSection'
+import HourlyForecastSection from './components/HourlyForecastSection'
 import { useCityWeather } from './hooks/useCityWeather'
 
 import './App.css'
@@ -22,6 +23,7 @@ function App() {
         <>
           <WeatherInformationSection />
           <DailyForecastSection />
+          <HourlyForecastSection />
         </>
       )}
       {!weatherData && (

@@ -1,15 +1,17 @@
-import React from 'react'
+import { weatherCodeToIcon } from '../utils/weatherCodeConversor'
 
-const WeatherInformationForTheDay = ({ day }) => {
+import styles from './WeatherInformationForTheDay.module.css'
 
+const WeatherInformationForTheDay = ({ day, maxTemp, minTemp, weatherCode }) => {
+  const weatherIcon = weatherCodeToIcon(weatherCode);
 
   return (
-    <div style={{ flex: '1 1 30%', textAlign: 'center', maxWidth: '30%'}}>
-      <span>{day}</span>
-      <img src="" alt="" />
-      <div>
-        <span>20°</span>
-        <span>13°</span>
+    <div className={`${styles.weatherInfoContainer} d-flex flex-column align-items-center p-3 rounded-4 gap-3`}>
+      <span className='fs-4 text-white'>{day}</span>
+      <img src={weatherIcon} alt="" style={{width: '80%'}}/>
+      <div className='d-flex gap-5 justify-content-center'>
+        <span className='text-white'>{maxTemp}°</span>
+        <span>{minTemp}°</span>
       </div>
     </div>
   )

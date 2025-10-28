@@ -1,0 +1,17 @@
+.container {
+    background-color: var(--color-neutral-800);
+}
+
+.button {
+    background-color: var(--color-neutral-700);
+    cursor: pointer;
+}
+
+.timeframeSelector {
+    position: absolute;
+    background-color: var(--color-neutral-700);
+    border: 1px solid var(--color-neutral-600);
+    cursor: pointer;
+}
+
+

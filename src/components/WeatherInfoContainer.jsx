@@ -8,7 +8,7 @@ const WeatherInfoContainer = () => {
   const date = new Date();
   const actualHour = date.getHours();
 
-  const hourlyTemperatures = weatherData.weatherData.hourly.apparent_temperature.slice(0, 24);
+  const hourlyTemperatures = weatherData.weatherData.hourly.temperature_2m.slice(0, 24);
   const feels_like = hourlyTemperatures[actualHour].toFixed(0);
   const humidity = weatherData?.weatherData?.current?.relative_humidity_2m.toFixed(0);
   const wind_speed = weatherData?.weatherData?.current?.wind_speed_10m.toFixed(0);
