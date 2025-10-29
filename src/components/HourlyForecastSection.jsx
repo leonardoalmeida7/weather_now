@@ -37,21 +37,26 @@ const HourlyForecastSection = () => {
     return { initial, end };
   }, [orderedWeekdays, weekdaySelected]);
 
-  const { weatherCodes, time } = useMemo(() => {
+  const { weatherCodes, time, temperature } = useMemo(() => {
     const weatherCodes =
       weatherData?.weatherData?.hourly?.weather_code?.slice(initial, end) || [];
     const time =
-      weatherData?.weatherData?.hourly?.time?.slice(initial, end) || [];
-    return { weatherCodes, time };
+      weatherData?.weatherData?.hourly?.time?.slice(initial, end).map((t) => t.split("T")[1]).map((t) => t.split(":")[0]) || [];
+    const temperature = 
+      weatherData?.weatherData?.hourly?.temperature_2m?.slice(initial, end) || [];
+    return { weatherCodes, time, temperature };
   }, [weatherData, initial, end]);
+
+
+  console.log(weatherData)
 
   const handleClick = () => {
     setIsActive(!isActive);
   };
 
   return (
-    <div className={`${styles.container} mt-5 p-4 rounded-4`}>
-      <div className="d-flex justify-content-center align-items-center">
+    <div className={`${styles.container} my-5 rounded-4 py-4`}>
+      <div className="d-flex justify-content-center align-items-center mb-3 ">
         <h2 className="fs-4">Hourly forecast</h2>
         <div className="mx-5"></div>
         <div className="position-relative">
@@ -70,7 +75,7 @@ const HourlyForecastSection = () => {
             {orderedWeekdays.map((day, index) => (
               <span
                 key={index}
-                className="border-bottom"
+                className={styles.timeframeOption}
                 onClick={() => {
                   setWeekdaySelected(day);
                   setIsActive(false);
@@ -82,9 +87,9 @@ const HourlyForecastSection = () => {
           </div>
         </div>
       </div>
-      <div className="d-flex flex-column" style={{height: '500px', overflow:"scroll"}}>
+      <div className={`${styles.hourlyForecastContainer} d-flex flex-column px-3`}>
         {weatherCodes.map((code, index) => (
-          <HourlyForecast key={index} weatherCode={code} />
+          <HourlyForecast key={index} weatherCode={code} time={time[index]} temperature={temperature[index]} />
         ))}
       </div>
     </div>
