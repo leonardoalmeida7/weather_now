@@ -28,9 +28,9 @@ const DailyForecastSection = () => {
 
 
   return (
-    <section className='mt-5'>
+    <section className='mt-5 mt-xl-4'>
         <h2>Daily forecast</h2>
-        <div className='d-flex gap-3 flex-wrap mt-4'>
+        <div className='d-flex gap-3 gap-xl-2 flex-wrap flex-md-nowrap mt-4 mt-xl-3'>
           {orderedDays.map((day, index) => (
             <WeatherInformationForTheDay key={index} day={day} maxTemp={dailyDataMax[index].toFixed(0)} minTemp={dailyDataMin[index].toFixed(0)} weatherCode={dailyWeatherCode[index]} />
           ))}

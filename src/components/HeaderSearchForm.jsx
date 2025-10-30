@@ -39,8 +39,8 @@ const HeaderSearchForm = () => {
   }
 
   return (
-    <form className={`d-flex flex-column gap-3 my-5 ${styles.form}`} onSubmit={handleSubmit}>
-      <div className={`${styles.inputContainer} d-flex align-items-center gap-3 p-3 rounded-4`}>
+    <form className={`d-flex flex-column gap-3 my-5 mb-md-4 my-xl-4 ${styles.form} flex-md-row`} onSubmit={handleSubmit}>
+      <div className={`${styles.inputContainer} d-flex align-items-center gap-3 p-3 py-xl-2 rounded-3 `}>
         <div>
           <img src={iconSearch} alt="Search Icon" />
         </div>
@@ -56,7 +56,7 @@ const HeaderSearchForm = () => {
       </div>
       <button 
         type="submit" 
-        className={`${styles.button} rounded-4 p-2`}
+        className={`${styles.button} rounded-3 p-2 px-md-4`}
         disabled={isSubmitting || !searchCity.trim()}
       >
         {isSubmitting ? 'Searching...' : 'Search'}

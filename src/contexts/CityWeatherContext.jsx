@@ -11,7 +11,7 @@ export const CityWeatherProvider = ({ children }) => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
-    const fetchCityWeatherData = useCallback(async () => {
+    const fetchCityWeatherData = useCallback(async (temperature, windSpeed, precipitation) => {
         if (!cityWeather || cityWeather.length === 0) {
             return;
         }
@@ -21,7 +21,7 @@ export const CityWeatherProvider = ({ children }) => {
 
         try {
             const { lat, lon, name, country } = cityWeather[0];
-            const data = await fetchWeather(lat, lon);
+            const data = await fetchWeather(lat, lon, temperature, windSpeed, precipitation);
             setWeatherData({ weatherData: data, name, country });
         } catch (err) {
             console.error('Erro ao buscar dados do clima:', err);

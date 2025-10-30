@@ -12,7 +12,7 @@ const HourlyForecast = ({ weatherCode, time, temperature }) => {
     };
 
     return (
-      <div className={`${styles.hourlyForecast} d-flex justify-content-between align-items-center my-2 p-2 rounded-3`}>
+      <div className={`${styles.hourlyForecast} d-flex justify-content-between align-items-center my-2 p-2 py-xl-1 rounded-3`}>
         <div>
           <img src={weatherIcon} alt="icon" className={styles.weatherIcon} />
           <span className={styles.time}>{formatTime(time)}</span>

@@ -24,7 +24,7 @@
   --font-size-2xl: 28px; 
   --font-size-3xl: 32px; 
   --font-size-4xl: 52px; 
-  --font-size-5xl: 96px; 
+  --font-size-5xl: 66px; 
 
 }
 
@@ -36,7 +36,9 @@
 }
 
 
-body {
+body, html {
+  min-height: 100dvh;
   background-color: var(--color-neutral-900);
   color: var(--color-neutral-200);
+  overflow-y: hidden;
 }

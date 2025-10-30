@@ -7,7 +7,7 @@ const PageHeader = () => {
   return (
     <header className={`${styles.header} text-center`}>
         <TopHeader />
-        <div className='my-4'>
+        <div className={`${styles.titleContainer} my-4 my-xl-1`}>
           <h1>How's the sky looking today?</h1>
         </div>
         <HeaderSearchForm />

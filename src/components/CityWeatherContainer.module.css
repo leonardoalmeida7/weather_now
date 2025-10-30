@@ -39,3 +39,19 @@
 .icon {
     width: 160px;
 }
+
+
+@media (min-width: 1200px) {
+    .weatherInfoContainer {
+        background: url('../assets/images/bg-today-large.svg') no-repeat center center;
+        background-size: cover;
+    }
+
+    .temperature {
+        font-size: 6rem;
+    }
+
+    .icon {
+        width: 130px;
+    }
+}

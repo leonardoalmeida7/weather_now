@@ -3,3 +3,19 @@
     font-weight: 700;
     margin: 0;
 }
+
+.titleContainer {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+    .header h1 {
+        font-size: var(--font-size-5xl);
+    }
+
+    .titleContainer {
+        max-width: none;
+        margin: 0;
+    }
+}

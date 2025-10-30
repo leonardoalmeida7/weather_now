@@ -41,6 +41,7 @@
 
 .hourlyForecast {
     background-color: var(--color-neutral-700);
+    cursor: pointer;
 }
 
 
@@ -53,4 +54,14 @@
 .time {
     color: var(--color-neutral-0);
     font-size: 1.2rem;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        height: 100%;
+    }
+
+    .hourlyForecastContainer {
+        height: 90%;
+    }
 }

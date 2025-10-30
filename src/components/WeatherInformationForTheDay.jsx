@@ -6,10 +6,10 @@ const WeatherInformationForTheDay = ({ day, maxTemp, minTemp, weatherCode }) => 
   const weatherIcon = weatherCodeToIcon(weatherCode);
 
   return (
-    <div className={`${styles.weatherInfoContainer} d-flex flex-column align-items-center p-3 rounded-4 gap-3`}>
+    <div className={`${styles.weatherInfoContainer} d-flex flex-column align-items-center p-3 rounded-4 gap-2`}>
       <span className='fs-4 text-white'>{day}</span>
-      <img src={weatherIcon} alt="" style={{width: '80%'}}/>
-      <div className='d-flex gap-5 justify-content-center'>
+      <img src={weatherIcon} alt="icon" style={{width: '80%'}}/>
+      <div className='d-flex gap-4 justify-content-center'>
         <span className='text-white'>{maxTemp}°</span>
         <span>{minTemp}°</span>
       </div>

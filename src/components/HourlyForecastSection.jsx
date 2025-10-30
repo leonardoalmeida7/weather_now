@@ -55,8 +55,8 @@ const HourlyForecastSection = () => {
   };
 
   return (
-    <div className={`${styles.container} my-5 rounded-4 py-4`}>
-      <div className="d-flex justify-content-center align-items-center mb-3 ">
+    <div className={`${styles.container} my-5 my-xl-0 rounded-4 py-4`}>
+      <div className="d-flex justify-content-center justify-content-md-between align-items-center mb-3 px-4">
         <h2 className="fs-4">Hourly forecast</h2>
         <div className="mx-5"></div>
         <div className="position-relative">

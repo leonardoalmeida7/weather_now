@@ -19,13 +19,15 @@ const CityWeatherContainer = () => {
   const currentRegion = regionName.of(weatherData?.country);
 
   return (
-    <div className={`${styles.weatherInfoContainer} d-flex flex-column text-center p-5 rounded-4  ${loading ? styles.loading : ''}`}>
+    <div className={`${styles.weatherInfoContainer} d-flex flex-column flex-md-row justify-content-between align-items-center text-center p-5 rounded-4  ${loading ? styles.loading : ''}`}>
       { !loading && (
         <>
-          <span className={`${styles.location} m-0`}>
-            {`${weatherData?.name}, ${currentRegion}` || 'Select a city'}
-          </span>
-          <span className={`${styles.date} m-0`}>{formattedDate}</span>
+          <div className='d-flex flex-column text-xl-start'>
+            <span className={`${styles.location} m-0`}>
+              {`${weatherData?.name}, ${currentRegion}` || 'Select a city'}
+            </span>
+            <span className={`${styles.date} m-0`}>{formattedDate}</span>
+          </div>
           <div className='d-flex align-items-center justify-content-center gap-2 mt-3'>
             <img src={IconSunny} alt="Sunny icon" className={`${styles.icon}`} />
             <span className={`${styles.temperature}`}>

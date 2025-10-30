@@ -11,7 +11,7 @@ const TopHeader = () => {
     const [showUnits, setShowUnits] = useState(false);
 
   return (
-    <div className='d-flex justify-content-between align-items-center p-3'>
+    <div className='d-flex justify-content-between align-items-center p-3 position-relative'>
         <div className={styles.logo}>
             <img src={logo} alt="Weather App Logo" className={styles.logo} />
         </div>

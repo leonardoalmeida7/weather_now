@@ -1,0 +1,14 @@
+@media (min-width: 1200px) {
+    main {
+        height: 73dvh;
+        max-height: 655px;
+    }
+
+    main > div {
+        width: 60%;
+    }
+
+    main > aside {
+        width: 40%;
+    }
+}
